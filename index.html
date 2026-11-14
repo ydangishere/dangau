@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Dang Au offers Vietnam-based software outsourcing, custom software development, AI agent services, backend API integration and UI/UX design. Discuss your project." name="description"/><title>Software Outsourcing &amp; AI Development in Vietnam | Dang Au</title><style>:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#e9f1ff;background:#081324}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 24px}header{position:sticky;top:0;background:#081324ed;backdrop-filter:blur(12px);border-bottom:1px solid #26354d;z-index:5}nav{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:20px}.brand{font-size:24px;font-weight:800;letter-spacing:-1px}.brand span{color:#54d6c7}.links{display:flex;gap:24px;font-size:14px;color:#b5c5da}.btn{display:inline-block;background:#64dfd0;color:#081324;border-radius:9px;padding:13px 20px;font-weight:750}.ghost{border:1px solid #61738e;background:transparent;color:#e9f1ff}.hero{padding:110px 0 100px;background:radial-gradient(ellipse at 75% 35%,#163c53 0%,#081324 60%)}.eyebrow{color:#6fe1d5;text-transform:uppercase;font-size:12px;letter-spacing:3px;font-weight:700}h1{font-size:clamp(42px,6.5vw,76px);line-height:1.08;letter-spacing:-3px;max-width:850px;margin:18px 0}h1 em{color:#70e1d5;font-style:normal}.lead{font-size:19px;line-height:1.7;color:#b7c9dc;max-width:710px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}section{padding:88px 0;border-top:1px solid #1c2d43}h2{font-size:clamp(29px,4vw,43px);letter-spacing:-1px;margin:10px 0 18px}.sub{color:#b3c5d8;max-width:720px;line-height:1.8}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.card{background:#101f33;border:1px solid #263b52;border-radius:16px;padding:26px;min-height:210px}.card .num{color:#64dfd0;font-size:13px;font-weight:800}.card h3{font-size:19px;margin:20px 0 10px}.card p{color:#b5c6d8;line-height:1.7;font-size:14px}.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}.work a{color:#73e5d7;text-decoration:underline;text-underline-offset:4px}.pill{display:inline-block;color:#83eadf;background:#163e48;padding:7px 12px;border-radius:100px;font-size:12px}.contact{background:linear-gradient(125deg,#12314a,#0d2237);border-radius:20px;padding:45px;margin-top:25px}.contact p{color:#bbd0df;line-height:1.7}footer{border-top:1px solid #26354d;padding:28px 0;color:#93a7bc;font-size:13px}.note{font-size:12px;color:#8da4b8;margin-top:20px}@media(max-width:750px){.links{display:none}.hero{padding:76px 0}.grid,.work{grid-template-columns:1fr}section{padding:62px 0}h1{letter-spacing:-1.5px}.contact{padding:26px}}</style><style>#lang-toggle{background:transparent;color:#70e1d5;border:1px solid #52687e;border-radius:8px;padding:9px 13px;cursor:pointer;font-weight:800}#lang-toggle:hover{background:#17324a}</style><style>
+html{scroll-behavior:smooth}body{overflow-x:hidden}
+.parallax-hero{position:relative;isolation:isolate;overflow:hidden;min-height:680px;display:flex;align-items:center;background:radial-gradient(ellipse at 78% 45%,#133d54 0%,#081324 64%)}
+#three-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.85;pointer-events:none}
+.hero-orb{position:absolute;width:390px;height:390px;right:8%;top:14%;border-radius:50%;background:radial-gradient(circle at 32% 32%,#64dfd04d,#164a8c26 48%,transparent 73%);filter:blur(28px);z-index:-1;pointer-events:none;transform:translate3d(var(--mx,0px),var(--my,0px),0);transition:transform .25s ease-out}
+.hero-content{position:relative;z-index:1;width:100%;text-shadow:0 2px 30px #08132477}
+.hero-content h1{max-width:850px}.hero-content .lead{max-width:660px}
+.reveal-section{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal-section.is-visible{opacity:1;transform:translateY(0)}
+.reveal-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.reveal-card:hover{transform:translateY(-7px);box-shadow:0 22px 45px #0005;border-color:#64dfd088}
+.actions .btn{transition:transform .25s ease,box-shadow .25s ease}.actions .btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #64dfd022}
+@media(max-width:700px){.parallax-hero{min-height:620px;padding:100px 0 80px}.hero-orb{right:-180px;top:12%;width:350px;height:350px}#three-canvas{opacity:.55}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-section{opacity:1;transform:none;transition:none}.reveal-card,.actions .btn,.hero-orb{transition:none!important;transform:none!important}#three-canvas{display:none}}
+</style><style>
+.contact-modal[hidden]{display:none!important}
+.contact-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px}
+.contact-backdrop{position:absolute;inset:0;background:rgba(2,9,20,.78);backdrop-filter:blur(9px)}
+.contact-dialog{position:relative;width:min(100%,510px);background:#101f33;border:1px solid #385b6b;border-radius:22px;padding:30px;box-shadow:0 30px 100px #0009;color:#e9f1ff}
+.contact-dialog h2{font-size:30px;margin:8px 0}
+.contact-close{position:absolute;right:18px;top:16px;border:1px solid #466075;border-radius:8px;background:transparent;color:#fff;font-size:23px;width:38px;height:38px;cursor:pointer}
+.contact-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;border-top:1px solid #30465b}
+.contact-row strong{display:block;font-size:13px;color:#9db2c8;margin-bottom:5px}
+.contact-value{font-size:16px;overflow-wrap:anywhere}
+.copy-contact{border:1px solid #6edaca;border-radius:8px;background:#173d48;color:#a9fff2;padding:10px 14px;cursor:pointer;flex-shrink:0}
+.copy-contact:disabled{opacity:.35;cursor:not-allowed}
+.contact-hint{color:#a8bfd0;font-size:13px;line-height:1.6;margin-top:16px}
+.contact-dialog button:focus-visible{outline:3px solid #70e1d5;outline-offset:3px}
+@media(max-width:480px){.contact-dialog{padding:23px}.contact-row{align-items:flex-start}.contact-value{font-size:14px}}
+</style><style>#faq{padding:90px 0;color:#eaf2ff}#faq .container{max-width:1050px;margin:auto;padding:0 24px}#faq h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:12px}#faq>div>p{color:#b9c8d7;margin-bottom:30px}.seo-faq{border-top:1px solid #36506a;padding:18px 0}.seo-faq:last-child{border-bottom:1px solid #36506a}.seo-faq summary{font-weight:650;cursor:pointer;line-height:1.5}.seo-faq p{color:#bdcddd;line-height:1.7;max-width:780px;margin:12px 0 0}#lang-toggle{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}</style><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="website" property="og:type"/><meta content="Dang Au" property="og:site_name"/><meta content="Software Outsourcing &amp; AI Development in Vietnam | Dang Au" property="og:title"/><meta content="Dang Au offers Vietnam-based software outsourcing, custom software development, AI agent services, backend API integration and UI/UX design. Discuss your project." property="og:description"/><meta content="en_US" property="og:locale"/><meta content="summary" name="twitter:card"/><meta content="Software Outsourcing &amp; AI Development in Vietnam | Dang Au" name="twitter:title"/><meta content="Dang Au offers Vietnam-based software outsourcing, custom software development, AI agent services, backend API integration and UI/UX design. Discuss your project." name="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Dang Au", "description": "Dang Au provides software outsourcing in Vietnam, custom AI development, AI agent automation, backend engineering and UI/UX design for international businesses.", "email": "dangvany@gmail.com", "telephone": "+84908133919", "areaServed": "Worldwide", "knowsAbout": ["Software outsourcing", "Custom software development", "AI agent development", "AI workflow automation", "Backend API development", "UI/UX design"]}</script><style>.seo-intro,.seo-faq-note{max-width:800px;line-height:1.7;color:#b6c9d8;margin:16px 0 30px}</style><style>.seo-service-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.seo-service-links a{border:1px solid #34576a;padding:12px 16px;border-radius:10px;color:#8debdc}.seo-service-links a:hover{background:#153b4b}.seo-service-hero{padding:90px 0 55px;background:radial-gradient(ellipse at 80% 30%,#153f55,#081324 65%)}.seo-service-hero h1{max-width:980px}.seo-service-body{padding:60px 0}.seo-service-body ul{line-height:2;color:#c4d5e6}.seo-service-body p{max-width:760px;line-height:1.8;color:#c4d5e6}.seo-service-cta{margin:32px 0}.seo-footer-links{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0}.seo-footer-links a{color:#85e7db;font-size:13px}</style><style id="mobile-nav-layout-fix">
+/* Mobile auto-layout: brand | content-sized CTA | language switcher */
+@media (max-width: 750px) {
+ header .wrap { padding-inline: 16px; }
+ header nav { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,auto) auto; align-items:center; column-gap:12px; min-height:76px; }
+ header nav .brand { font-size:clamp(17px,5vw,23px); line-height:1.12; letter-spacing:-.6px; min-width:0; }
+ header nav > .btn { display:inline-flex; justify-content:center; align-items:center; text-align:center; justify-self:center; width:max-content; max-width:100%; padding:11px 13px; font-size:clamp(12px,3.4vw,14px); line-height:1.3; white-space:normal; border-radius:10px; }
+ header nav #lang-toggle { justify-self:end; padding:9px 11px; font-size:14px; }
+}
+@media (max-width: 375px) {
+ header .wrap {padding-inline:12px}
+ header nav {column-gap:8px}
+ header nav > .btn {padding:10px 9px;font-size:12px}
+ header nav #lang-toggle {padding:8px 9px}
+}
+</style><link href="https://ydangishere.github.io/dangau/" rel="canonical"/><link href="https://ydangishere.github.io/dangau/" hreflang="en" rel="alternate"/><link href="https://ydangishere.github.io/dangau/vi/" hreflang="vi" rel="alternate"/><link href="https://ydangishere.github.io/dangau/" hreflang="x-default" rel="alternate"/></head><body><header><div class="wrap"><nav><a class="brand" href="#home">DANG<span> AU.</span></a><div class="links"><a href="#services">Services</a><a href="#work">Experience</a><a href="#about">About</a><a aria-haspopup="dialog" data-contact-trigger="true" href="#contact" role="button">Contact</a></div><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Start a Conversation</a><a href="vi/index.html" hreflang="vi" id="lang-toggle">VI</a></nav></div></header><main><div class="hero parallax-hero" id="home"><canvas aria-hidden="true" id="three-canvas"></canvas><div aria-hidden="true" class="hero-orb"></div><div class="wrap hero-content"><div class="eyebrow">AI Development Company · Offshore Software Development Vietnam</div><h1>Software Outsourcing &amp; Custom AI Development in Vietnam</h1><p class="lead">Looking for a Vietnam-based software outsourcing partner or AI development services? Dang Au helps businesses scope, design and develop custom web applications, AI agents, backend systems and workflow automation—with a business-first, security-conscious approach.</p><div class="actions"><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Discuss Your Project →</a><a class="btn ghost" href="#services">Explore Services</a></div></div></div><section class="reveal-section" id="services"><div class="wrap"><div class="eyebrow">What we do</div><h2>Custom software development, offshore engineering and AI automation services</h2><p class="seo-intro">Looking for a Vietnam-based software development partner? Dang Au discusses custom web and mobile development, backend API integration, AI agent development, and business workflow automation based on your project scope.</p><p class="sub">Explore custom AI solutions, offshore software development, backend API integration and UI/UX design services for businesses worldwide.</p><div class="grid"><article class="card reveal-card"><div class="num">01 / AI</div><h3>AI Solutions &amp; Automation</h3><p>AI agents, document intelligence, retrieval-augmented generation, assistants and workflow automation.</p></article><article class="card reveal-card"><div class="num">02 / BUILD</div><h3>Custom Software Development</h3><p>Web and mobile products, internal tools, dashboards and business platforms designed around real workflows.</p></article><article class="card reveal-card"><div class="num">03 / PARTNER</div><h3>Software Outsourcing</h3><p>Flexible project delivery, feature development, system modernization and engineering collaboration.</p></article><article class="card reveal-card"><div class="num">04 / CONNECT</div><h3>Backend &amp; Integrations</h3><p>APIs, databases, third-party integrations and reliable service architectures.</p></article><article class="card reveal-card"><div class="num">05 / DESIGN</div><h3>Product &amp; UX Design</h3><p>Product discovery, user journeys, interface design, interactive prototypes and design systems.</p></article><article class="card reveal-card"><div class="num">06 / TRUST</div><h3>Security-Aware Engineering</h3><p>Security-conscious architecture, authentication, access controls and cross-platform delivery planning.</p></article></div><div aria-label="Detailed services" class="seo-service-links"><a href="services/software-outsourcing/">Software Outsourcing Company in Vietnam</a><a href="services/custom-software-development/">Custom Software Development in Vietnam</a><a href="services/ai-development/">AI Development Services for Businesses</a><a href="services/ai-agents/">AI Agent Development &amp; Workflow Automation</a><a href="services/backend-integration/">Backend API Development &amp; System Integration</a><a href="services/ui-ux-design/">UI UX Design Outsourcing in Vietnam</a></div></div></section><section class="reveal-section" id="about"><div class="wrap"><div class="eyebrow">Our approach</div><h2>Understand first. Engineer with purpose.</h2><p class="sub">Dang Au is a Vietnam-based software and AI solutions business. We start with your goals, clarify the problem, and shape a delivery approach around your priorities. We value fast feedback, transparent scope and thoughtful security practices—without making promises before understanding the requirements.</p><div class="grid"><div class="card reveal-card"><div class="num">01</div><h3>Business-first</h3><p>Translate operational needs into clear, actionable technical requirements.</p></div><div class="card reveal-card"><div class="num">02</div><h3>Iterative delivery</h3><p>Make progress visible through practical milestones and regular feedback.</p></div><div class="card reveal-card"><div class="num">03</div><h3>Platform flexibility</h3><p>Choose suitable technologies for web, mobile, cloud and connected systems.</p></div></div></div></section><section class="reveal-section" id="work"><div class="wrap"><div class="eyebrow">Selected experience &amp; references</div><h2>Relevant product and engineering work.</h2><p class="sub">Selected examples from the founder's professional portfolio and technical project references. These are not presented as client contracts completed by Dang Au.</p><div class="work"><article class="card reveal-card"><span class="pill">AI / Document Intelligence</span><h3>MMS AI Checker</h3><p>AI-assisted document review and retrieval workflow concept.</p><a href="https://ydangkuul.github.io/mms/MMS.html" rel="noopener" target="_blank">View project ↗</a></article><article class="card reveal-card"><span class="pill">Product / Design Systems</span><h3>VietPay Design System</h3><p>Design language and interface foundations for a fintech product ecosystem.</p><a href="https://ydangishere.github.io/vietpay/styleguide/" rel="noopener" target="_blank">View project ↗</a></article><article class="card reveal-card"><span class="pill">UX / UI</span><h3>Product Design Portfolio</h3><p>Selected digital product and interface design work.</p><a href="https://ydangishere.github.io/Design/" rel="noopener" target="_blank">View portfolio ↗</a></article><article class="card reveal-card"><span class="pill">Engineering / Portfolio</span><h3>Technical Portfolio</h3><p>Additional software, AI and product engineering references.</p><a href="https://ydangishere.github.io/backendjobs/miyagami/index.html" rel="noopener" target="_blank">View portfolio ↗</a></article></div></div></section><section class="section reveal-section" id="faq"><div class="container"><h2>Frequently asked questions about software outsourcing and AI development</h2><p class="seo-faq-note">Can Dang Au support offshore software development or AI agent integration? Contact us with your requirements to assess project scope, technical fit, timeline and a suitable engagement model.</p><p>Answers to common questions from businesses evaluating a Vietnam-based software development partner.</p><details class="seo-faq"><summary>Does Dang Au provide offshore software development in Vietnam?</summary><p>Dang Au is based in Vietnam and discusses remote software engineering and project-based outsourcing engagements with international businesses. Project scope and delivery arrangements are confirmed during discovery.</p></details><details class="seo-faq"><summary>Can Dang Au build custom AI agents and document AI systems?</summary><p>Dang Au offers AI solution design, AI workflow automation and document-intelligence project scoping. The technical approach, security requirements and implementation feasibility are assessed for each project.</p></details><details class="seo-faq"><summary>What kinds of software development projects can we discuss?</summary><p>Potential engagements include custom web applications, backend APIs, system integrations, internal tools, UI/UX design and AI-enabled business workflows, subject to requirements and delivery capacity.</p></details><details class="seo-faq"><summary>How much does software outsourcing or AI development cost?</summary><p>Pricing is open for discussion. Estimates depend on requirements, technical complexity, security needs, team availability and timeline. No fixed rate is promised before reviewing the scope.</p></details><details class="seo-faq"><summary>How can I request a software development proposal?</summary><p>Use the Contact button to copy our email or phone number. Share your project objectives, key features, target platforms and expected timeline to begin a discovery conversation.</p></details></div></section><section class="reveal-section" id="contact"><div class="wrap"><div class="eyebrow">Let's collaborate</div><div class="contact"><h2>Have a project in mind?</h2><p>Tell us about your business challenge, timeline and goals. Engagement models and pricing are discussed based on project scope.</p><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Contact Dang Au →</a><p class="note">Email and phone are available in the Contact panel.</p></div></div></section></main><footer><div class="wrap">© 2026 Dang Au. AI Solutions &amp; Software Engineering. · Vietnam</div><div class="wrap seo-footer-links"><a href="services/software-outsourcing/">Software Outsourcing Company in Vietnam</a><a href="services/custom-software-development/">Custom Software Development in Vietnam</a><a href="services/ai-development/">AI Development Services for Businesses</a><a href="services/ai-agents/">AI Agent Development &amp; Workflow Automation</a><a href="services/backend-integration/">Backend API Development &amp; System Integration</a><a href="services/ui-ux-design/">UI UX Design Outsourcing in Vietnam</a></div></footer><script type="module">
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reveal=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveal.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal-section').forEach(el=>reveal.observe(el));
+if(!reduced){
+ const hero=document.querySelector('.parallax-hero');const orb=document.querySelector('.hero-orb');
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;orb.style.setProperty('--mx',`${x*28}px`);orb.style.setProperty('--my',`${y*28}px`)},{passive:true});
+ // Progressive enhancement: the site remains usable if the Three.js CDN is unavailable.
+ try{
+ const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js');
+ const canvas=document.getElementById('three-canvas');const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
+ renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));
+ const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(48,1,.1,100);camera.position.z=9;
+ const group=new THREE.Group();scene.add(group);
+ const geo=new THREE.IcosahedronGeometry(2.35,1);const mat=new THREE.MeshBasicMaterial({color:0x55e4d4,wireframe:true,transparent:true,opacity:.24});const mesh=new THREE.Mesh(geo,mat);group.add(mesh);
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(2.95,.013,3,150),new THREE.MeshBasicMaterial({color:0x67d6fa,transparent:true,opacity:.20}));ring.rotation.x=.85;ring.rotation.y=.5;group.add(ring);
+ const points=[];for(let i=0;i<30;i++){const theta=Math.random()*Math.PI*2,phi=Math.acos(2*Math.random()-1),radius=2.5+Math.random()*2.3;points.push(radius*Math.sin(phi)*Math.cos(theta),radius*Math.sin(phi)*Math.sin(theta),radius*Math.cos(phi));}
+ const particles=new THREE.BufferGeometry();particles.setAttribute('position',new THREE.Float32BufferAttribute(points,3));const dots=new THREE.Points(particles,new THREE.PointsMaterial({color:0x82f4e4,size:.025,transparent:true,opacity:.35}));group.add(dots);
+ const resize=()=>{const r=hero.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();const worldUnitsPerPixel=(2*camera.position.z*Math.tan(THREE.MathUtils.degToRad(camera.fov/2)))/r.height;group.position.x=(r.width<700?1.35:2.5)+40*worldUnitsPerPixel;};resize();window.addEventListener('resize',resize,{passive:true});
+ let active=true;const vis=new IntersectionObserver(entries=>active=entries[0].isIntersecting,{threshold:0});vis.observe(hero);
+ const clock=new THREE.Clock();const animate=()=>{requestAnimationFrame(animate);if(!active||document.hidden)return;const t=clock.getElapsedTime();mesh.rotation.y=t*.09;mesh.rotation.x=t*.035;ring.rotation.z=t*.065;dots.rotation.y=-t*.025;renderer.render(scene,camera)};animate();
+ }catch(err){console.info('3D enhancement unavailable; using CSS background.',err)}
+}
+</script>
+<div class="contact-modal" hidden="" id="contact-modal">
+<div class="contact-backdrop" data-close-contact="true"></div>
+<div aria-labelledby="contact-modal-title" aria-modal="true" class="contact-dialog" role="dialog" tabindex="-1">
+<button aria-label="Close" class="contact-close" data-close-contact="true" type="button">×</button>
+<div class="eyebrow" id="contact-modal-eyebrow">GET IN TOUCH</div>
+<h2 id="contact-modal-title">Contact Dang Au</h2>
+<div class="contact-row"><div><strong id="contact-email-label">Email</strong><span class="contact-value" id="contact-email-value">dangvany@gmail.com</span></div><button class="copy-contact" disabled="" id="copy-email" type="button">Copy</button></div>
+<div class="contact-row"><div><strong id="contact-phone-label">Phone / WhatsApp</strong><span class="contact-value" id="contact-phone-value">+84 908 133 919</span></div><button class="copy-contact" disabled="" id="copy-phone" type="button">Copy</button></div>
+<p class="contact-hint" id="contact-hint">Contact Dang Au using the details below.</p>
+</div>
+</div>
+<script>
+(() => {
+  // Enter verified business contact details here before publishing.
+  const CONTACT = {email: 'dangvany@gmail.com', phone: '+84 908 133 919'};
+  const modal = document.getElementById('contact-modal');
+  const dialog = modal.querySelector('.contact-dialog');
+  const close = modal.querySelector('.contact-close');
+  let previousFocus = null;
+  const vi = () => document.documentElement.lang === 'vi';
+  const t = (en, vn) => vi() ? vn : en;
+  const emailValue = document.getElementById('contact-email-value');
+  const phoneValue = document.getElementById('contact-phone-value');
+  const emailButton = document.getElementById('copy-email');
+  const phoneButton = document.getElementById('copy-phone');
+  function refresh() {
+    document.getElementById('contact-modal-eyebrow').textContent = t('GET IN TOUCH','LIÊN HỆ');
+    document.getElementById('contact-modal-title').textContent = t('Contact Dang Au','Liên hệ Dang Au');
+    document.getElementById('contact-phone-label').textContent = t('Phone / WhatsApp','Điện thoại / WhatsApp');
+    emailValue.textContent = CONTACT.email || t('Not provided yet','Chưa cập nhật');
+    phoneValue.textContent = CONTACT.phone || t('Not provided yet','Chưa cập nhật');
+    emailButton.disabled = !CONTACT.email;
+    phoneButton.disabled = !CONTACT.phone;
+    emailButton.textContent = phoneButton.textContent = t('Copy','Sao chép');
+    document.getElementById('contact-hint').textContent = t(
+      'Click Copy to save our contact details.',
+      'Nhấn Sao chép để lưu thông tin liên hệ.'
+    );
+    close.setAttribute('aria-label', t('Close','Đóng'));
+  }
+  function openModal(e) {
+    if (e) e.preventDefault();
+    previousFocus = document.activeElement;
+    refresh();
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    close.focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if(previousFocus && previousFocus.focus) previousFocus.focus();
+  }
+  document.querySelectorAll('[data-contact-trigger]').forEach(a => a.addEventListener('click',openModal));
+  modal.querySelectorAll('[data-close-contact]').forEach(el => el.addEventListener('click',closeModal));
+  document.addEventListener('keydown',e => {
+    if(modal.hidden) return;
+    if(e.key === 'Escape') closeModal();
+    if(e.key === 'Tab') {
+      const focusable = [...dialog.querySelectorAll('button:not(:disabled),a[href]')];
+      const first=focusable[0], last=focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  async function copyValue(value, button) {
+    if(!value) return;
+    try {
+      if(navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(value);
+      else {
+        const input=document.createElement('textarea');
+        input.value=value;input.style.position='fixed';input.style.opacity='0';
+        document.body.appendChild(input);input.select();
+        if(!document.execCommand('copy')) throw new Error('Copy unavailable');
+        input.remove();
+      }
+      button.textContent=t('Copied!','Đã sao chép!');
+    } catch(err) {
+      button.textContent=t('Select to copy','Chọn để sao chép');
+      const sel=window.getSelection(); const range=document.createRange();
+      range.selectNodeContents(button===emailButton?emailValue:phoneValue);
+      sel.removeAllRanges();sel.addRange(range);
+    }
+  }
+  emailButton.addEventListener('click',()=>copyValue(CONTACT.email,emailButton));
+  phoneButton.addEventListener('click',()=>copyValue(CONTACT.phone,phoneButton));
+
+})();
+</script></body></html>
