@@ -25,7 +25,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 .contact-row strong{display:block;font-size:13px;color:#9db2c8;margin-bottom:5px}
 .contact-value{font-size:16px;overflow-wrap:anywhere}
 .copy-contact{border:1px solid #6edaca;border-radius:8px;background:#173d48;color:#a9fff2;padding:10px 14px;cursor:pointer;flex-shrink:0}
-.copy-contact:disabled{opacity:.35;cursor:not-allowed}
+.contact-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.call-contact{display:inline-flex;align-items:center;justify-content:center;border:1px solid #6edaca;border-radius:8px;background:#5cdbcc;color:#081d29;padding:10px 14px;text-decoration:none;font-weight:700;min-height:40px}.call-contact:hover{background:#a9fff2}.call-contact:focus-visible{outline:3px solid #70e1d5;outline-offset:3px}@media(max-width:480px){.contact-actions{gap:6px}.call-contact{padding:10px 12px}}.copy-contact:disabled{opacity:.35;cursor:not-allowed}
 .contact-hint{color:#a8bfd0;font-size:13px;line-height:1.6;margin-top:16px}
 .contact-dialog button:focus-visible{outline:3px solid #70e1d5;outline-offset:3px}
 @media(max-width:480px){.contact-dialog{padding:23px}.contact-row{align-items:flex-start}.contact-value{font-size:14px}}
@@ -75,7 +75,7 @@ if(!reduced){
 <div class="eyebrow" id="contact-modal-eyebrow">GET IN TOUCH</div>
 <h2 id="contact-modal-title">Contact Dang Au</h2>
 <div class="contact-row"><div><strong id="contact-email-label">Email</strong><span class="contact-value" id="contact-email-value">dangvany@gmail.com</span></div><button class="copy-contact" disabled="" id="copy-email" type="button">Copy</button></div>
-<div class="contact-row"><div><strong id="contact-phone-label">Phone / WhatsApp</strong><span class="contact-value" id="contact-phone-value">+84 908 133 919</span></div><button class="copy-contact" disabled="" id="copy-phone" type="button">Copy</button></div>
+<div class="contact-row"><div><strong id="contact-phone-label">Phone / WhatsApp</strong><span class="contact-value" id="contact-phone-value">+84 908 133 919</span></div><div class="contact-actions"><button class="copy-contact" disabled="" id="copy-phone" type="button">Copy</button><a class="call-contact" id="call-phone" href="tel:+84908133919" aria-label="Call Dang Au at +84 908 133 919">Call</a></div></div>
 <p class="contact-hint" id="contact-hint">Contact Dang Au using the details below.</p>
 </div>
 </div>
@@ -93,6 +93,7 @@ if(!reduced){
   const phoneValue = document.getElementById('contact-phone-value');
   const emailButton = document.getElementById('copy-email');
   const phoneButton = document.getElementById('copy-phone');
+  const callButton = document.getElementById('call-phone');
   function refresh() {
     document.getElementById('contact-modal-eyebrow').textContent = t('GET IN TOUCH','LIÊN HỆ');
     document.getElementById('contact-modal-title').textContent = t('Contact Dang Au','Liên hệ Dang Au');
@@ -101,6 +102,9 @@ if(!reduced){
     phoneValue.textContent = CONTACT.phone || t('Not provided yet','Chưa cập nhật');
     emailButton.disabled = !CONTACT.email;
     phoneButton.disabled = !CONTACT.phone;
+    callButton.href = 'tel:' + CONTACT.phone.replace(/[^+\d]/g, '');
+    callButton.textContent = t('Call','Gọi');
+    callButton.setAttribute('aria-label', t('Call Dang Au','Gọi Dang Au') + ': ' + CONTACT.phone);
     emailButton.textContent = phoneButton.textContent = t('Copy','Sao chép');
     document.getElementById('contact-hint').textContent = t(
       'Click Copy to save our contact details.',
