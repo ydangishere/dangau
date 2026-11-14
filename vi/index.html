@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Dang Au cung cấp gia công phần mềm, phát triển AI theo yêu cầu, AI Agent, tích hợp backend API và thiết kế UI/UX tại Việt Nam. Liên hệ để trao đổi dự án." name="description"/><title>Gia công phần mềm &amp; Phát triển AI tại Việt Nam | Dang Au</title><style>:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#e9f1ff;background:#081324}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 24px}header{position:sticky;top:0;background:#081324ed;backdrop-filter:blur(12px);border-bottom:1px solid #26354d;z-index:5}nav{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:20px}.brand{font-size:24px;font-weight:800;letter-spacing:-1px}.brand span{color:#54d6c7}.links{display:flex;gap:24px;font-size:14px;color:#b5c5da}.btn{display:inline-block;background:#64dfd0;color:#081324;border-radius:9px;padding:13px 20px;font-weight:750}.ghost{border:1px solid #61738e;background:transparent;color:#e9f1ff}.hero{padding:110px 0 100px;background:radial-gradient(ellipse at 75% 35%,#163c53 0%,#081324 60%)}.eyebrow{color:#6fe1d5;text-transform:uppercase;font-size:12px;letter-spacing:3px;font-weight:700}h1{font-size:clamp(42px,6.5vw,76px);line-height:1.08;letter-spacing:-3px;max-width:850px;margin:18px 0}h1 em{color:#70e1d5;font-style:normal}.lead{font-size:19px;line-height:1.7;color:#b7c9dc;max-width:710px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}section{padding:88px 0;border-top:1px solid #1c2d43}h2{font-size:clamp(29px,4vw,43px);letter-spacing:-1px;margin:10px 0 18px}.sub{color:#b3c5d8;max-width:720px;line-height:1.8}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.card{background:#101f33;border:1px solid #263b52;border-radius:16px;padding:26px;min-height:210px}.card .num{color:#64dfd0;font-size:13px;font-weight:800}.card h3{font-size:19px;margin:20px 0 10px}.card p{color:#b5c6d8;line-height:1.7;font-size:14px}.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}.work a{color:#73e5d7;text-decoration:underline;text-underline-offset:4px}.pill{display:inline-block;color:#83eadf;background:#163e48;padding:7px 12px;border-radius:100px;font-size:12px}.contact{background:linear-gradient(125deg,#12314a,#0d2237);border-radius:20px;padding:45px;margin-top:25px}.contact p{color:#bbd0df;line-height:1.7}footer{border-top:1px solid #26354d;padding:28px 0;color:#93a7bc;font-size:13px}.note{font-size:12px;color:#8da4b8;margin-top:20px}@media(max-width:750px){.links{display:none}.hero{padding:76px 0}.grid,.work{grid-template-columns:1fr}section{padding:62px 0}h1{letter-spacing:-1.5px}.contact{padding:26px}}</style><style>#lang-toggle{background:transparent;color:#70e1d5;border:1px solid #52687e;border-radius:8px;padding:9px 13px;cursor:pointer;font-weight:800}#lang-toggle:hover{background:#17324a}</style><style>
+html{scroll-behavior:smooth}body{overflow-x:hidden}
+.parallax-hero{position:relative;isolation:isolate;overflow:hidden;min-height:680px;display:flex;align-items:center;background:radial-gradient(ellipse at 78% 45%,#133d54 0%,#081324 64%)}
+#three-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.85;pointer-events:none}
+.hero-orb{position:absolute;width:390px;height:390px;right:8%;top:14%;border-radius:50%;background:radial-gradient(circle at 32% 32%,#64dfd04d,#164a8c26 48%,transparent 73%);filter:blur(28px);z-index:-1;pointer-events:none;transform:translate3d(var(--mx,0px),var(--my,0px),0);transition:transform .25s ease-out}
+.hero-content{position:relative;z-index:1;width:100%;text-shadow:0 2px 30px #08132477}
+.hero-content h1{max-width:850px}.hero-content .lead{max-width:660px}
+.reveal-section{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal-section.is-visible{opacity:1;transform:translateY(0)}
+.reveal-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.reveal-card:hover{transform:translateY(-7px);box-shadow:0 22px 45px #0005;border-color:#64dfd088}
+.actions .btn{transition:transform .25s ease,box-shadow .25s ease}.actions .btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #64dfd022}
+@media(max-width:700px){.parallax-hero{min-height:620px;padding:100px 0 80px}.hero-orb{right:-180px;top:12%;width:350px;height:350px}#three-canvas{opacity:.55}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-section{opacity:1;transform:none;transition:none}.reveal-card,.actions .btn,.hero-orb{transition:none!important;transform:none!important}#three-canvas{display:none}}
+</style><style>
+.contact-modal[hidden]{display:none!important}
+.contact-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px}
+.contact-backdrop{position:absolute;inset:0;background:rgba(2,9,20,.78);backdrop-filter:blur(9px)}
+.contact-dialog{position:relative;width:min(100%,510px);background:#101f33;border:1px solid #385b6b;border-radius:22px;padding:30px;box-shadow:0 30px 100px #0009;color:#e9f1ff}
+.contact-dialog h2{font-size:30px;margin:8px 0}
+.contact-close{position:absolute;right:18px;top:16px;border:1px solid #466075;border-radius:8px;background:transparent;color:#fff;font-size:23px;width:38px;height:38px;cursor:pointer}
+.contact-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;border-top:1px solid #30465b}
+.contact-row strong{display:block;font-size:13px;color:#9db2c8;margin-bottom:5px}
+.contact-value{font-size:16px;overflow-wrap:anywhere}
+.copy-contact{border:1px solid #6edaca;border-radius:8px;background:#173d48;color:#a9fff2;padding:10px 14px;cursor:pointer;flex-shrink:0}
+.copy-contact:disabled{opacity:.35;cursor:not-allowed}
+.contact-hint{color:#a8bfd0;font-size:13px;line-height:1.6;margin-top:16px}
+.contact-dialog button:focus-visible{outline:3px solid #70e1d5;outline-offset:3px}
+@media(max-width:480px){.contact-dialog{padding:23px}.contact-row{align-items:flex-start}.contact-value{font-size:14px}}
+</style><style>#faq{padding:90px 0;color:#eaf2ff}#faq .container{max-width:1050px;margin:auto;padding:0 24px}#faq h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:12px}#faq>div>p{color:#b9c8d7;margin-bottom:30px}.seo-faq{border-top:1px solid #36506a;padding:18px 0}.seo-faq:last-child{border-bottom:1px solid #36506a}.seo-faq summary{font-weight:650;cursor:pointer;line-height:1.5}.seo-faq p{color:#bdcddd;line-height:1.7;max-width:780px;margin:12px 0 0}#lang-toggle{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}</style><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="website" property="og:type"/><meta content="Dang Au" property="og:site_name"/><meta content="Gia công phần mềm &amp; Phát triển AI tại Việt Nam | Dang Au" property="og:title"/><meta content="Dang Au cung cấp gia công phần mềm, phát triển AI theo yêu cầu, AI Agent, tích hợp backend API và thiết kế UI/UX tại Việt Nam. Liên hệ để trao đổi dự án." property="og:description"/><meta content="vi_VN" property="og:locale"/><meta content="summary" name="twitter:card"/><meta content="Gia công phần mềm &amp; Phát triển AI tại Việt Nam | Dang Au" name="twitter:title"/><meta content="Dang Au cung cấp gia công phần mềm, phát triển AI theo yêu cầu, AI Agent, tích hợp backend API và thiết kế UI/UX tại Việt Nam. Liên hệ để trao đổi dự án." name="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Dang Au", "description": "Dang Au cung cấp gia công phần mềm tại Việt Nam, phát triển AI theo yêu cầu, AI Agent, backend, tích hợp API và thiết kế UI/UX cho doanh nghiệp.", "email": "dangvany@gmail.com", "telephone": "+84908133919", "areaServed": "Worldwide", "knowsAbout": ["Software outsourcing", "Custom software development", "AI agent development", "AI workflow automation", "Backend API development", "UI/UX design"]}</script><style>.seo-intro,.seo-faq-note{max-width:800px;line-height:1.7;color:#b6c9d8;margin:16px 0 30px}</style><style>.seo-service-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.seo-service-links a{border:1px solid #34576a;padding:12px 16px;border-radius:10px;color:#8debdc}.seo-service-links a:hover{background:#153b4b}.seo-service-hero{padding:90px 0 55px;background:radial-gradient(ellipse at 80% 30%,#153f55,#081324 65%)}.seo-service-hero h1{max-width:980px}.seo-service-body{padding:60px 0}.seo-service-body ul{line-height:2;color:#c4d5e6}.seo-service-body p{max-width:760px;line-height:1.8;color:#c4d5e6}.seo-service-cta{margin:32px 0}.seo-footer-links{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0}.seo-footer-links a{color:#85e7db;font-size:13px}</style><style id="mobile-nav-layout-fix">
+/* Mobile auto-layout: brand | content-sized CTA | language switcher */
+@media (max-width: 750px) {
+ header .wrap { padding-inline: 16px; }
+ header nav { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,auto) auto; align-items:center; column-gap:12px; min-height:76px; }
+ header nav .brand { font-size:clamp(17px,5vw,23px); line-height:1.12; letter-spacing:-.6px; min-width:0; }
+ header nav > .btn { display:inline-flex; justify-content:center; align-items:center; text-align:center; justify-self:center; width:max-content; max-width:100%; padding:11px 13px; font-size:clamp(12px,3.4vw,14px); line-height:1.3; white-space:normal; border-radius:10px; }
+ header nav #lang-toggle { justify-self:end; padding:9px 11px; font-size:14px; }
+}
+@media (max-width: 375px) {
+ header .wrap {padding-inline:12px}
+ header nav {column-gap:8px}
+ header nav > .btn {padding:10px 9px;font-size:12px}
+ header nav #lang-toggle {padding:8px 9px}
+}
+</style><link rel="canonical" href="https://ydangishere.github.io/dangau/vi/"/><link rel="alternate" hreflang="en" href="https://ydangishere.github.io/dangau/"/><link rel="alternate" hreflang="vi" href="https://ydangishere.github.io/dangau/vi/"/><link rel="alternate" hreflang="x-default" href="https://ydangishere.github.io/dangau/"/></head><body><header><div class="wrap"><nav><a class="brand" href="#home">DANG<span> AU.</span></a><div class="links"><a href="#services">Dịch vụ</a><a href="#work">Kinh nghiệm</a><a href="#about">Giới thiệu</a><a aria-haspopup="dialog" data-contact-trigger="true" href="#contact" role="button">Liên hệ</a></div><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Trao đổi dự án</a><a href="../index.html" hreflang="en" id="lang-toggle">EN</a></nav></div></header><main><div class="hero parallax-hero" id="home"><canvas aria-hidden="true" id="three-canvas"></canvas><div aria-hidden="true" class="hero-orb"></div><div class="wrap hero-content"><div class="eyebrow">Phát triển AI · Gia công phần mềm · Đối tác công nghệ Việt Nam</div><h1>Gia công phần mềm và phát triển AI theo yêu cầu tại Việt Nam</h1><p class="lead">Dang Au cung cấp dịch vụ gia công phần mềm tại Việt Nam, phát triển phần mềm theo yêu cầu, thiết kế giải pháp AI, AI Agent, tích hợp API và UI/UX. Trao đổi trực tiếp để xác định phạm vi, tiến độ và phương án phù hợp.</p><div class="actions"><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Trao đổi dự án →</a><a class="btn ghost" href="#services">Xem dịch vụ</a></div></div></div><section class="reveal-section" id="services"><div class="wrap"><div class="eyebrow">Dịch vụ</div><h2>Dịch vụ gia công phần mềm, phát triển AI và ứng dụng theo yêu cầu</h2><p class="seo-intro">Tìm đối tác phát triển phần mềm offshore tại Việt Nam? Khám phá các dịch vụ phát triển ứng dụng web và mobile, AI Agent, tự động hóa quy trình, backend API và thiết kế sản phẩm.</p><p class="sub">Khám phá dịch vụ AI theo yêu cầu, phát triển phần mềm thuê ngoài, tích hợp API backend và thiết kế UI/UX cho doanh nghiệp.</p><div class="grid"><article class="card reveal-card"><div class="num">01 / AI</div><h3>Giải pháp AI &amp; Tự động hóa</h3><p>AI Agent, xử lý tài liệu thông minh, RAG, trợ lý AI và tự động hóa quy trình.</p></article><article class="card reveal-card"><div class="num">02 / BUILD</div><h3>Phát triển phần mềm theo yêu cầu</h3><p>Ứng dụng web, di động, công cụ nội bộ, bảng điều khiển và nền tảng doanh nghiệp.</p></article><article class="card reveal-card"><div class="num">03 / PARTNER</div><h3>Gia công phần mềm</h3><p>Triển khai dự án linh hoạt, phát triển tính năng, hiện đại hóa hệ thống và hợp tác kỹ thuật.</p></article><article class="card reveal-card"><div class="num">04 / CONNECT</div><h3>Backend &amp; Tích hợp hệ thống</h3><p>API, cơ sở dữ liệu, tích hợp bên thứ ba và kiến trúc dịch vụ tin cậy.</p></article><article class="card reveal-card"><div class="num">05 / DESIGN</div><h3>Thiết kế sản phẩm &amp; UX</h3><p>Nghiên cứu sản phẩm, hành trình người dùng, giao diện, prototype và design system.</p></article><article class="card reveal-card"><div class="num">06 / TRUST</div><h3>Phát triển chú trọng bảo mật</h3><p>Kiến trúc chú trọng bảo mật, xác thực, phân quyền và kế hoạch triển khai đa nền tảng.</p></article></div><div aria-label="Detailed services" class="seo-service-links"><a href="../services/software-outsourcing/vi/">Gia công phần mềm tại Việt Nam</a><a href="../services/custom-software-development/vi/">Phát triển phần mềm theo yêu cầu</a><a href="../services/ai-development/vi/">Dịch vụ phát triển AI cho doanh nghiệp</a><a href="../services/ai-agents/vi/">Phát triển AI Agent và tự động hóa quy trình</a><a href="../services/backend-integration/vi/">Phát triển Backend API và tích hợp hệ thống</a><a href="../services/ui-ux-design/vi/">Dịch vụ thiết kế UI UX tại Việt Nam</a></div></div></section><section class="reveal-section" id="about"><div class="wrap"><div class="eyebrow">Cách tiếp cận</div><h2>Hiểu nhu cầu trước. Xây dựng đúng mục tiêu.</h2><p class="sub">Dang Au là đơn vị cung cấp giải pháp AI và phần mềm tại Việt Nam. Chúng tôi bắt đầu từ mục tiêu của khách hàng, làm rõ bài toán và lựa chọn cách triển khai phù hợp. Chúng tôi coi trọng phản hồi nhanh, phạm vi minh bạch và bảo mật thực tế.</p><div class="grid"><div class="card reveal-card"><div class="num">01</div><h3>Lấy kinh doanh làm trọng tâm</h3><p>Chuyển nhu cầu vận hành thành yêu cầu kỹ thuật rõ ràng.</p></div><div class="card reveal-card"><div class="num">02</div><h3>Triển khai theo từng giai đoạn</h3><p>Theo dõi tiến độ qua các cột mốc và phản hồi thường xuyên.</p></div><div class="card reveal-card"><div class="num">03</div><h3>Linh hoạt đa nền tảng</h3><p>Lựa chọn công nghệ phù hợp cho web, mobile, cloud và hệ thống tích hợp.</p></div></div></div></section><section class="reveal-section" id="work"><div class="wrap"><div class="eyebrow">Kinh nghiệm &amp; dự án tham khảo</div><h2>Kinh nghiệm thiết kế sản phẩm và phát triển công nghệ.</h2><p class="sub">Các ví dụ từ portfolio chuyên môn của người sáng lập và dự án kỹ thuật tham khảo; không được giới thiệu là hợp đồng khách hàng do Dang Au trực tiếp thực hiện.</p><div class="work"><article class="card reveal-card"><span class="pill">AI / Xử lý tài liệu</span><h3>MMS AI Checker</h3><p>Mô hình quy trình kiểm tra và truy xuất tài liệu hỗ trợ bởi AI.</p><a href="https://ydangkuul.github.io/mms/MMS.html" rel="noopener" target="_blank">Xem dự án ↗</a></article><article class="card reveal-card"><span class="pill">Sản phẩm / Design System</span><h3>VietPay Design System</h3><p>Ngôn ngữ thiết kế và nền tảng giao diện cho hệ sinh thái fintech.</p><a href="https://ydangishere.github.io/vietpay/styleguide/" rel="noopener" target="_blank">Xem dự án ↗</a></article><article class="card reveal-card"><span class="pill">UX / UI</span><h3>Product Design Portfolio</h3><p>Các dự án thiết kế giao diện và sản phẩm số tiêu biểu.</p><a href="https://ydangishere.github.io/Design/" rel="noopener" target="_blank">Xem portfolio ↗</a></article><article class="card reveal-card"><span class="pill">Kỹ thuật / Portfolio</span><h3>Technical Portfolio</h3><p>Các dự án tham khảo về phần mềm, AI và kỹ thuật sản phẩm.</p><a href="https://ydangishere.github.io/backendjobs/miyagami/index.html" rel="noopener" target="_blank">Xem portfolio ↗</a></article></div></div></section><section class="section reveal-section" id="faq"><div class="container"><h2>Câu hỏi thường gặp về gia công phần mềm và phát triển AI</h2><p class="seo-faq-note">Dang Au có nhận dự án phát triển phần mềm offshore và tích hợp AI Agent không? Hãy gửi yêu cầu để cùng đánh giá phạm vi, công nghệ, tiến độ và hình thức hợp tác phù hợp.</p><p>Giải đáp những câu hỏi phổ biến khi doanh nghiệp lựa chọn đối tác phát triển phần mềm tại Việt Nam.</p><details class="seo-faq"><summary>Dang Au có nhận gia công phần mềm cho khách hàng quốc tế không?</summary><p>Dang Au hoạt động tại Việt Nam và có thể trao đổi về hợp tác phát triển phần mềm từ xa hoặc theo dự án. Phạm vi và phương thức triển khai được thống nhất sau khi làm rõ yêu cầu.</p></details><details class="seo-faq"><summary>Dang Au có phát triển AI Agent và hệ thống xử lý tài liệu không?</summary><p>Dang Au cung cấp tư vấn thiết kế giải pháp AI, tự động hóa quy trình và phân tích bài toán xử lý tài liệu. Phương án kỹ thuật và tính khả thi được đánh giá theo từng dự án.</p></details><details class="seo-faq"><summary>Có thể trao đổi về những loại dự án phần mềm nào?</summary><p>Các cơ hội phù hợp có thể gồm ứng dụng web, API backend, tích hợp hệ thống, công cụ nội bộ, thiết kế UI/UX và quy trình có ứng dụng AI, tùy yêu cầu và năng lực triển khai.</p></details><details class="seo-faq"><summary>Chi phí gia công phần mềm hoặc phát triển AI là bao nhiêu?</summary><p>Báo giá được thảo luận theo phạm vi, độ phức tạp, yêu cầu bảo mật, nguồn lực và thời gian. Chúng tôi không cam kết mức giá cố định khi chưa phân tích dự án.</p></details><details class="seo-faq"><summary>Làm thế nào để yêu cầu báo giá dự án?</summary><p>Nhấn Contact / Liên hệ để sao chép email hoặc số điện thoại. Hãy gửi mục tiêu, tính năng chính, nền tảng triển khai và thời gian dự kiến để bắt đầu trao đổi.</p></details></div></section><section class="reveal-section" id="contact"><div class="wrap"><div class="eyebrow">Hợp tác cùng chúng tôi</div><div class="contact"><h2>Bạn đang có dự án?</h2><p>Hãy chia sẻ bài toán, thời gian và mục tiêu của bạn. Hình thức hợp tác và chi phí sẽ được thảo luận theo phạm vi dự án.</p><a aria-haspopup="dialog" class="btn" data-contact-trigger="true" href="#contact" role="button">Liên hệ Dang Au →</a><p class="note">Email và số điện thoại có trong bảng Liên hệ.</p></div></div></section></main><footer><div class="wrap">© 2026 Dang Au. AI Solutions &amp; Software Engineering. · Vietnam</div><div class="wrap seo-footer-links"><a href="../services/software-outsourcing/vi/">Gia công phần mềm tại Việt Nam</a><a href="../services/custom-software-development/vi/">Phát triển phần mềm theo yêu cầu</a><a href="../services/ai-development/vi/">Dịch vụ phát triển AI cho doanh nghiệp</a><a href="../services/ai-agents/vi/">Phát triển AI Agent và tự động hóa quy trình</a><a href="../services/backend-integration/vi/">Phát triển Backend API và tích hợp hệ thống</a><a href="../services/ui-ux-design/vi/">Dịch vụ thiết kế UI UX tại Việt Nam</a></div></footer><script type="module">
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reveal=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveal.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal-section').forEach(el=>reveal.observe(el));
+if(!reduced){
+ const hero=document.querySelector('.parallax-hero');const orb=document.querySelector('.hero-orb');
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;orb.style.setProperty('--mx',`${x*28}px`);orb.style.setProperty('--my',`${y*28}px`)},{passive:true});
+ // Progressive enhancement: the site remains usable if the Three.js CDN is unavailable.
+ try{
+ const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js');
+ const canvas=document.getElementById('three-canvas');const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
+ renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));
+ const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(48,1,.1,100);camera.position.z=9;
+ const group=new THREE.Group();scene.add(group);
+ const geo=new THREE.IcosahedronGeometry(2.35,1);const mat=new THREE.MeshBasicMaterial({color:0x55e4d4,wireframe:true,transparent:true,opacity:.24});const mesh=new THREE.Mesh(geo,mat);group.add(mesh);
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(2.95,.013,3,150),new THREE.MeshBasicMaterial({color:0x67d6fa,transparent:true,opacity:.20}));ring.rotation.x=.85;ring.rotation.y=.5;group.add(ring);
+ const points=[];for(let i=0;i<30;i++){const theta=Math.random()*Math.PI*2,phi=Math.acos(2*Math.random()-1),radius=2.5+Math.random()*2.3;points.push(radius*Math.sin(phi)*Math.cos(theta),radius*Math.sin(phi)*Math.sin(theta),radius*Math.cos(phi));}
+ const particles=new THREE.BufferGeometry();particles.setAttribute('position',new THREE.Float32BufferAttribute(points,3));const dots=new THREE.Points(particles,new THREE.PointsMaterial({color:0x82f4e4,size:.025,transparent:true,opacity:.35}));group.add(dots);
+ const resize=()=>{const r=hero.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();const worldUnitsPerPixel=(2*camera.position.z*Math.tan(THREE.MathUtils.degToRad(camera.fov/2)))/r.height;group.position.x=(r.width<700?1.35:2.5)+40*worldUnitsPerPixel;};resize();window.addEventListener('resize',resize,{passive:true});
+ let active=true;const vis=new IntersectionObserver(entries=>active=entries[0].isIntersecting,{threshold:0});vis.observe(hero);
+ const clock=new THREE.Clock();const animate=()=>{requestAnimationFrame(animate);if(!active||document.hidden)return;const t=clock.getElapsedTime();mesh.rotation.y=t*.09;mesh.rotation.x=t*.035;ring.rotation.z=t*.065;dots.rotation.y=-t*.025;renderer.render(scene,camera)};animate();
+ }catch(err){console.info('3D enhancement unavailable; using CSS background.',err)}
+}
+</script>
+<div class="contact-modal" hidden="" id="contact-modal">
+<div class="contact-backdrop" data-close-contact="true"></div>
+<div aria-labelledby="contact-modal-title" aria-modal="true" class="contact-dialog" role="dialog" tabindex="-1">
+<button aria-label="Close" class="contact-close" data-close-contact="true" type="button">×</button>
+<div class="eyebrow" id="contact-modal-eyebrow">GET IN TOUCH</div>
+<h2 id="contact-modal-title">Contact Dang Au</h2>
+<div class="contact-row"><div><strong id="contact-email-label">Email</strong><span class="contact-value" id="contact-email-value">dangvany@gmail.com</span></div><button class="copy-contact" disabled="" id="copy-email" type="button">Copy</button></div>
+<div class="contact-row"><div><strong id="contact-phone-label">Phone / WhatsApp</strong><span class="contact-value" id="contact-phone-value">+84 908 133 919</span></div><button class="copy-contact" disabled="" id="copy-phone" type="button">Copy</button></div>
+<p class="contact-hint" id="contact-hint">Contact Dang Au using the details below.</p>
+</div>
+</div>
+<script>
+(() => {
+  // Enter verified business contact details here before publishing.
+  const CONTACT = {email: 'dangvany@gmail.com', phone: '+84 908 133 919'};
+  const modal = document.getElementById('contact-modal');
+  const dialog = modal.querySelector('.contact-dialog');
+  const close = modal.querySelector('.contact-close');
+  let previousFocus = null;
+  const vi = () => document.documentElement.lang === 'vi';
+  const t = (en, vn) => vi() ? vn : en;
+  const emailValue = document.getElementById('contact-email-value');
+  const phoneValue = document.getElementById('contact-phone-value');
+  const emailButton = document.getElementById('copy-email');
+  const phoneButton = document.getElementById('copy-phone');
+  function refresh() {
+    document.getElementById('contact-modal-eyebrow').textContent = t('GET IN TOUCH','LIÊN HỆ');
+    document.getElementById('contact-modal-title').textContent = t('Contact Dang Au','Liên hệ Dang Au');
+    document.getElementById('contact-phone-label').textContent = t('Phone / WhatsApp','Điện thoại / WhatsApp');
+    emailValue.textContent = CONTACT.email || t('Not provided yet','Chưa cập nhật');
+    phoneValue.textContent = CONTACT.phone || t('Not provided yet','Chưa cập nhật');
+    emailButton.disabled = !CONTACT.email;
+    phoneButton.disabled = !CONTACT.phone;
+    emailButton.textContent = phoneButton.textContent = t('Copy','Sao chép');
+    document.getElementById('contact-hint').textContent = t(
+      'Click Copy to save our contact details.',
+      'Nhấn Sao chép để lưu thông tin liên hệ.'
+    );
+    close.setAttribute('aria-label', t('Close','Đóng'));
+  }
+  function openModal(e) {
+    if (e) e.preventDefault();
+    previousFocus = document.activeElement;
+    refresh();
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    close.focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if(previousFocus && previousFocus.focus) previousFocus.focus();
+  }
+  document.querySelectorAll('[data-contact-trigger]').forEach(a => a.addEventListener('click',openModal));
+  modal.querySelectorAll('[data-close-contact]').forEach(el => el.addEventListener('click',closeModal));
+  document.addEventListener('keydown',e => {
+    if(modal.hidden) return;
+    if(e.key === 'Escape') closeModal();
+    if(e.key === 'Tab') {
+      const focusable = [...dialog.querySelectorAll('button:not(:disabled),a[href]')];
+      const first=focusable[0], last=focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  async function copyValue(value, button) {
+    if(!value) return;
+    try {
+      if(navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(value);
+      else {
+        const input=document.createElement('textarea');
+        input.value=value;input.style.position='fixed';input.style.opacity='0';
+        document.body.appendChild(input);input.select();
+        if(!document.execCommand('copy')) throw new Error('Copy unavailable');
+        input.remove();
+      }
+      button.textContent=t('Copied!','Đã sao chép!');
+    } catch(err) {
+      button.textContent=t('Select to copy','Chọn để sao chép');
+      const sel=window.getSelection(); const range=document.createRange();
+      range.selectNodeContents(button===emailButton?emailValue:phoneValue);
+      sel.removeAllRanges();sel.addRange(range);
+    }
+  }
+  emailButton.addEventListener('click',()=>copyValue(CONTACT.email,emailButton));
+  phoneButton.addEventListener('click',()=>copyValue(CONTACT.phone,phoneButton));
+
+})();
+</script></body></html>
