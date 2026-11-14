@@ -57,7 +57,7 @@ if(!reduced){
  const canvas=document.getElementById('three-canvas');const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
  renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));
  const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(48,1,.1,100);camera.position.z=9;
- const group=new THREE.Group();scene.add(group);
+ const group=new THREE.Group();group.scale.setScalar(0.7);scene.add(group);
  const geo=new THREE.IcosahedronGeometry(2.35,1);const mat=new THREE.MeshBasicMaterial({color:0x55e4d4,wireframe:true,transparent:true,opacity:.24});const mesh=new THREE.Mesh(geo,mat);group.add(mesh);
  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.95,.013,3,150),new THREE.MeshBasicMaterial({color:0x67d6fa,transparent:true,opacity:.20}));ring.rotation.x=.85;ring.rotation.y=.5;group.add(ring);
  const points=[];for(let i=0;i<30;i++){const theta=Math.random()*Math.PI*2,phi=Math.acos(2*Math.random()-1),radius=2.5+Math.random()*2.3;points.push(radius*Math.sin(phi)*Math.cos(theta),radius*Math.sin(phi)*Math.sin(theta),radius*Math.cos(phi));}
