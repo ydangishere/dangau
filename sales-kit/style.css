@@ -7,3 +7,6 @@
 
 /* Tăng 20% cỡ chữ hai nhãn ở đầu Sales Kit. */
 .hero-meta .eyebrow{font-size:14.4px}.hero-meta .small{font-size:15.6px}
+
+/* Đồng bộ ba nút liên hệ. */
+.contact-links{gap:12px;align-items:center}.contact-links a.btn{text-decoration:none}
