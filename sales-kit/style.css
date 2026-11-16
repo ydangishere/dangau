@@ -4,3 +4,6 @@
 @media(max-width:900px){.layout{grid-template-columns:150px minmax(0,1fr);gap:28px}.service{grid-template-columns:1fr;gap:12px}}
 @media(max-width:650px){html{scroll-padding-top:90px}.wrap{padding:0 20px}.topbar{min-height:72px;gap:12px}.toplinks{gap:14px}.toplinks .home-link,.toplinks .btn{display:none}.brand{font-size:22px}.hero{padding:42px 0 32px}.hero h1{letter-spacing:-1px;font-size:36px}.hero-meta{align-items:start}.lead{font-size:16px}.layout{display:block;padding-top:0}.toc{position:static;margin:0 0 28px;padding-bottom:18px;border-bottom:1px solid var(--line)}.toc p{margin-top:0}.toc nav{display:flex;flex-wrap:wrap;gap:6px}.toc a{border:1px solid var(--line);border-radius:6px;padding:7px 10px}.content section{padding:32px 0}.projects,.offers{grid-template-columns:1fr}.card{padding:22px}.contact-box{padding:24px}h2{font-size:29px}.hero-meta .small{max-width:110px;text-align:right}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}@media(forced-colors:active){:root{scrollbar-color:auto}.btn,.card,.callout{border:1px solid CanvasText}}
+
+/* Tăng 20% cỡ chữ hai nhãn ở đầu Sales Kit. */
+.hero-meta .eyebrow{font-size:14.4px}.hero-meta .small{font-size:15.6px}
